@@ -1,0 +1,61 @@
+image{
+  width: 100%;
+}
+
+.list image{
+  width:20%;
+}
+.phone-list{
+  overflow: hidden;
+}
+.phone{
+  width: 50%;
+  float: left;
+}
+.phone image{
+  width: 98%;
+}
+.phone-name {
+  font-weight:700;
+  font-size:15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.phone-intro{
+  font-weight:200;
+  color: #727272;
+  font-size:13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.phone-price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ea625b;
+  color:white;
+  font-weight: 700;
+  width: 140px;
+  height: 40px;
+  margin: 5px auto;
+}
+.price{
+  font-weight:700;
+  font-size:15px;
+  margin-left: 15px;
+  color:#ea625b;
+}
+.original{
+  font-size:14px;
+  font-weight: 200;
+  text-decoration:line-through;
+}
