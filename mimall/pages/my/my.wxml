@@ -1,2 +1,38 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="userInfo">
+  <image class="userurl" src="../../images/select1.jpg"></image>
+  <view class="nickname">昵称</view>
+  <image class="code" src="../../images/erweima.png" mode="widthFix"></image>
+</view>
+
+<!-- 订单 -->
+<view class="order current">
+  <view>
+    <image src="../../images/payment.png" mode="widthFix"></image>
+    <view>待付款</view>
+  </view>
+  <view>
+    <image src="../../images/recevied.png" mode="widthFix"></image>
+    <view>待收货</view>
+  </view>
+  <view>
+    <image src="../../images/allorder.png" mode="widthFix"></image>
+    <view>全部订单</view>
+  </view>
+</view>
+
+<!-- 服务 -->
+<view class="myServer">我的服务</view>
+<view class="server current">
+  <view>
+    <image src="../../images/dizhi.png" mode="widthFix"></image>
+    <view>我的地址</view>
+  </view>
+  <view>
+    <image src="../../images/shoucang.png" mode="widthFix"></image>
+    <view>收藏夹</view>
+  </view>
+  <view>
+    <image src="../../images/shezhi.png" mode="widthFix"></image>
+    <view>设置</view>
+  </view>
+</view>
