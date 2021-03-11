@@ -26,41 +26,53 @@ Page({
       {"titleImg":"../../images/select.jpg",
       "goodList":[
         {
+        "id":1,
         "img":"../../images/select1.jpg",
         "name":"小米10",
         "intro":"骁龙865/1亿像素相机",
         "price":"￥3999起",
-        "original":"￥3999"
+        "original":"￥3999",
+        "num":1
       },{
+        "id":2,
         "img":"../../images/select2.jpg",
         "name":"Redmi K30 4G",
         "intro":"120Hz流速屏, 全速热爱",
         "price":"￥1299起",
-        "original":"￥1699"
+        "original":"￥1699",
+        "num":1
       },{
+        "id":3,
         "img":"../../images/select3.jpg",
         "name":"Redmi K30 4G",
         "intro":"120Hz流速屏, 全速热爱",
         "price":"￥1299起",
-        "original":"￥1699"
+        "original":"￥1699",
+        "num":1
       },{
+        "id":4,
         "img":"../../images/select4.jpg",
         "name":"Redmi K30 4G",
         "intro":"120Hz流速屏, 全速热爱",
         "price":"￥1299起",
-        "original":"￥1699"
+        "original":"￥1699",
+        "num":1
       },{
+        "id":5,
         "img":"../../images/select5.jpg",
         "name":"Redmi K30 4G",
         "intro":"120Hz流速屏, 全速热爱",
         "price":"￥1299起",
-        "original":"￥1699"
+        "original":"￥1699",
+        "num":1
       },{
+        "id":6,
         "img":"../../images/select6.jpg",
         "name":"Redmi K30 4G",
         "intro":"120Hz流速屏, 全速热爱",
         "price":"￥1299起",
-        "original":"￥1699"
+        "original":"￥1699",
+        "num":1
       }]}
     ],
     // 定义图片高度
@@ -84,7 +96,17 @@ Page({
         hei:hei
       })
   },
-
+    toDetails:function(event){
+      var id = event.target.dataset.id    
+      var goodList = this.data.phoneLists[0].goodList;
+      var phone = goodList[id];
+      //加到缓存
+      wx.setStorageSync('detailsList', [phone])
+      //跳转
+      wx.navigateTo({
+        url:'/pages/details/details'
+      })
+    },
   /**
    * 生命周期函数--监听页面加载
    */

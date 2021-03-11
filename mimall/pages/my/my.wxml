@@ -1,6 +1,10 @@
-<view class="userInfo">
-  <image class="userurl" src="../../images/select1.jpg"></image>
-  <view class="nickname">昵称</view>
+<view class="btn" wx:if="{{canIUse}}">
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>
+
+<view class="userInfo" wx:else>
+  <image class="userurl" src="{{userUrl}}"></image>
+  <view class="nickname">{{nickName}}</view>
   <image class="code" src="../../images/erweima.png" mode="widthFix"></image>
 </view>
 

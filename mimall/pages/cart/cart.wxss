@@ -1,1 +1,79 @@
-/* pages/cart/cart.wxss */
+.null {
+  text-align: center;
+  font-size: center;
+}
+
+.null image {
+  width: 50%;
+  margin: 30px;
+}
+
+.null .toIndex {
+  margin: 30px auto;
+  background-color: #ff6422;
+  color: #fff;
+  width: 70%;
+  height: 40px;
+  line-height: 40px;
+}
+
+.cart {
+  height: 100%;
+  width: 100%;
+}
+
+.cart-item-list {
+  height: 100px;
+  width: 100%;
+}
+
+.item-check {
+  height: 100px;
+  width: 20px;
+  background-color: tomato;
+  position: relative;
+  float: left;
+}
+
+.item-check .checkbox {
+  margin: auto;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: teal;
+}
+.cart-item-list image{
+  width: 100px;
+  height: 90px;
+  float: left;
+  padding-left:10px;
+}
+.item-box{
+  width: 130px;
+  height: 100%;
+  float: left;
+  padding-left:10px;
+}
+.item-box .item-name,.item-price,.num-box{
+  padding-top:10px ;
+}
+.num-box{
+  width: 130px;
+}
+.num-box .add,.num,.sub{
+  float: left;
+  border: 1px solid #E5E5E5;
+  text-align: center;
+}
+.num-box .add,.sub{
+  width: 20px;
+  height: 20px;
+}
+.num-box .num{
+  width: 40px;
+  height: 20px;
+}

@@ -1,0 +1,102 @@
+.phone-list{
+  overflow: hidden;
+}
+.phone{
+  width: 100%;
+  float: left;
+}
+.phone image{
+  width: 98%;
+}
+.phone-name {
+  font-weight:700;
+  font-size:15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.phone-intro{
+  font-weight:200;
+  color: #727272;
+  font-size:13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.phone-price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ea625b;
+  color:white;
+  font-weight: 700;
+  width: 140px;
+  height: 40px;
+  margin: 5px auto;
+}
+
+.down{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+}
+
+.down .left{
+  float: left;
+  width: 40%;
+  text-align: center;
+  font-size:14px;
+}
+
+.down .left>view{
+  width: 33.3%;
+  float: left;
+  position: relative;
+}
+.down .left>view image{
+  width: 50%;
+}
+
+.down .left>view .num{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #ff6422;
+  color:#fff;
+  padding:0 3px;
+  border-radius: 10px;
+  font-size:12px;
+}
+
+.down .right{
+  height: 40px;
+  line-height: 40px;
+  float:right;
+  width: 55%;
+  text-align: center;
+  color: #fff;
+  margin:5px 0;
+  border-radius:20px;
+  overflow: hidden;
+}
+
+.down .right .addCar{
+  width: 50%;
+  float: left;
+  background:linear-gradient(to right,#FEC905,#FF9A04)
+}
+.down .right .toPay{
+  width: 50%;
+  float: left;
+  background:linear-gradient(to right,#F97A07,#FD5C29)
+}

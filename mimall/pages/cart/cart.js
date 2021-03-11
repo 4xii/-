@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    //判断购物车中是否有数据
+    isData:false
   },
 
   /**
@@ -26,7 +27,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    //获取购物车缓存数据
+    var carList = wx.getStorageSync('carList')
+    var isData = false
+    if(carList.length != 0){
+      isData = true;
+    }
+    this.setData({
+      isData
+    })
+  },
+  toIndex:function(){
+    wx.switchTab({
+      url:'/pages/index/index'
+    })
   },
 
   /**

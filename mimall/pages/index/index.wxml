@@ -14,7 +14,7 @@
 
 <view class="phone-list" wx:for="{{phoneLists}}"  wx:key="this">
   <image src="{{item.titleImg}}" mode="widthFix"></image>
-  <view class="phone" wx:for="{{item.goodList}}" wx:for-item="items" wx:key="id">
+  <view class="phone" wx:for="{{item.goodList}}" wx:for-item="items" wx:for-index="id" wx:key="id">
     <image src="{{items.img}}" mode="widthFix"></image>
     <view class="phone-text">
         <view class="phone-name">{{items.name}}</view>
@@ -24,6 +24,6 @@
           <view class="original">{{items.original}}</view>
         </view>
     </view>
-    <view class="pay">立即购买</view>
+    <view class="pay" bindtap="toDetails" data-id="{{id}}">立即购买</view>
   </view>
 </view>

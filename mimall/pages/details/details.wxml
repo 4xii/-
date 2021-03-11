@@ -1,0 +1,35 @@
+<view class="phone" wx:for="{{detailsList}}" wx:key="id">
+  <image src="{{item.img}}" mode="widthFix"></image>
+  <view class="phone-text">
+      <view class="phone-name">{{item.name}}</view>
+      <view class="phone-intro">{{item.intro}}</view>
+      <view class="phone-price">
+        <view class="price">{{item.price}}</view>
+        <view class="original">{{item.original}}</view>
+      </view>
+  </view>
+</view>
+
+<view class ="down">
+  <view class="left">
+    <view>
+      <image src="../../images/index.png" mode="widthFix" bindtap="toIndex"></image>
+      <view class="text">首页</view>
+    </view>
+    <view>
+      <image src="../../images/gouwuche.png" mode="widthFix"  bindtap="toCart"></image>
+      <view class="text">购物车</view>
+      <view class="num" wx:if="{{totalNum != 0}}">{{totalNum}}</view>
+    </view>
+    <view>
+      <image src="../../images/favorite.png" mode="widthFix"  bindtap="toCollect"></image>
+      <view class="text">收藏</view>
+    </view>
+  </view>
+
+  <view class="right">
+    <view class="addCar"  bindtap="addCar">加入购物车</view>
+    <view class="toPay"  bindtap="toPay">立即购买</view>
+  </view>
+</view>
+
