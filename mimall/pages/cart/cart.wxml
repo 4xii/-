@@ -1,21 +1,62 @@
 <!-- 购物车数据 -->
 <view class="cart" wx:if="{{isData}}">
+  <!-- 列表 -->
   <view class="cart-item-list">
-    <view class="item-check">
-      <view class="checkbox">√</view>
-    </view>
-    <image src="../../images/select3.jpg"></image>
-    <view class="item-box">
-      <view class="item-name">Redmi K30 4G </view>
-      <view class="item-price">1399</view>
-      <view class="num-box">
-        <view class="add">+</view>
-        <view class="num">2</view>
-        <view class="sub">-</view>
+    <view class="item-check" >
+      <view class="checkbox ">
+        <view class="null"></view>
+        <image class="true" src="../../images/icon-gou.png"></image>
       </view>
     </view>
+    <image class="phone" src="../../images/select1.jpg"></image>
+    <view class="item-box">
+      <view class="item-name">小米10 Pro </view>
+      <view class="item-price">￥4399</view>
+      <view class="num-box">
+        <view class="add">-</view>
+        <view class="num">2</view>
+        <view class="sub">+</view>
+      </view>
+    </view>
+    <view class="item-del">
+      <image src="../../images/shanchu.png"></image>
+    </view>
   </view>
-
+  <view class="cart-item-list">
+    <view class="item-check" >
+      <view class="checkbox ">
+        <view class="null"></view>
+        <image class="true" src="../../images/icon-gou.png"></image>
+      </view>
+    </view>
+    <image class="phone" src="../../images/select2.jpg"></image>
+    <view class="item-box">
+      <view class="item-name">小米10 </view>
+      <view class="item-price">￥3699</view>
+      <view class="num-box">
+        <view class="add">-</view>
+        <view class="num">2</view>
+        <view class="sub">+</view>
+      </view>
+    </view>
+    <view class="item-del">
+      <image src="../../images/shanchu.png"></image>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="total">
+    <view class="total-left">
+      <view class="total-text">
+        总价:
+      </view>
+      <view class="total-price">
+        ￥17396
+      </view>
+    </view>
+    <view class="price-set">
+      结算
+    </view>
+  </view>
 </view>
 
 <!-- 购物车为空 -->

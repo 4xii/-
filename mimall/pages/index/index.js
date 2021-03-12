@@ -28,18 +28,18 @@ Page({
         {
         "id":1,
         "img":"../../images/select1.jpg",
-        "name":"小米10",
+        "name":"小米10 Pro",
         "intro":"骁龙865/1亿像素相机",
-        "price":"￥3999起",
-        "original":"￥3999",
+        "price":"￥4999起",
+        "original":"￥5999",
         "num":1
       },{
         "id":2,
         "img":"../../images/select2.jpg",
-        "name":"Redmi K30 4G",
+        "name":"小米10",
         "intro":"120Hz流速屏, 全速热爱",
-        "price":"￥1299起",
-        "original":"￥1699",
+        "price":"￥3699起",
+        "original":"￥4699",
         "num":1
       },{
         "id":3,

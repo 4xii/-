@@ -5,7 +5,6 @@
       <view class="phone-intro">{{item.intro}}</view>
       <view class="phone-price">
         <view class="price">{{item.price}}</view>
-        <view class="original">{{item.original}}</view>
       </view>
   </view>
 </view>

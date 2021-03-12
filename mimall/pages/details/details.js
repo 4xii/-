@@ -45,13 +45,14 @@ Page({
           wx.setStorageSync('carList', carList)
           isTrue = false;
         }
-        if (isTrue) {
-          carList.unshift(this.data.detailsList[0])
-          //更新缓存
-          wx.setStorageSync('carList', carList)
-        }
-        //计算总数
       }
+      if (isTrue) {
+        carList.unshift(this.data.detailsList[0])
+        //更新缓存
+        wx.setStorageSync('carList', carList)
+      }
+      //计算总数
+
       for (let j = 0; j < carList.length; j++) {
         num += carList[j].num
       }
