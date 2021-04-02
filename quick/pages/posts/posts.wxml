@@ -10,8 +10,8 @@
       <image src="/images/jumpfly.png"></image>
     </swiper-item>
   </swiper>
-<block wx:for="{{posts}}" wx:for-item="item" wx:for-index="idx">
-  <view class="post-container">
+<block wx:for="{{postList}}" wx:key="index" wx:for-item="item" wx:for-index="idx">
+  <view data-post-id="{{item.postId}}" bind:tap="onGoToDetail" class="post-container">
 
     <view class="post-author-date">
       <image class="post-author" src="{{item.avatar}}"></image>
