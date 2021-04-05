@@ -1,6 +1,6 @@
 // pages/post-detail/post-detail.js
 import {postList} from '../../data/data.js'
-const app = getApp()
+const app = getApp();
 console.log(app.test);
 Page({
 
@@ -8,37 +8,71 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postData:{},
-    collected:false,
-    _pid:null,
-    _postsCollected:{}
+    postData:{},//文章信息
+    collected:false,//控制收藏状态显示
+    isPlaying:false,//控制音乐播放暂停
+    _pid:null,//当前文章序号
+    _postsCollected:{},//储存收藏内容
+    _mgr:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const postData = postList[options.pid]
+    const postData = postList[options.pid];
     this.data._pid = options.pid;
-    const postsCollected = wx.getStorageSync('posts_collected')
-    this.data._postsCollected = postsCollected
-    let collected = postsCollected[this.data._pid]
+    const postsCollected = wx.getStorageSync('posts_collected');
+    this.data._postsCollected = postsCollected;
+    let collected = postsCollected[this.data._pid];
 
     if(collected === undefined){
+      //说明文章没有被收藏过
       collected = false
     }
     console.log(collected);
     this.setData({
       postData,
-      collected
+      collected,
+      isPlaying:this.currentMusicIsPlaying()
     })
+
+    const mgr = wx.getBackgroundAudioManager();
+    this.data._mgr = mgr;
+    mgr.onPlay(this.onMusicStart);
+    mgr.onPause(this.onMusicStop);
   },
 
-  onMusic(event){
-    const mgr = wx.getBackgroundAudioManager()
-    mgr.src = postList[0].music.url
-    mgr.title = postList[0].music.title
-    console.log(postList[0].music.url);
+  currentMusicIsPlaying(){
+    if(app.gIsPlayingMusic && app.gIsPlayingPostId === this.data._pid){
+        return true
+    }
+    return false
+  },
+
+  onMusicStart(event){
+    const mgr = this.data._mgr;
+    const music = postList[this.data._pid].music;
+    mgr.src = music.url;
+    mgr.title = music.title;
+    mgr.coverImgUrl = music.coverImg;
+
+    //全局播放状态
+    app.gIsPlayingMusice = true
+    app.gIsPlayingPostId = this.data._pid
+
+    this.setData({
+      isPlaying:true
+    })
+  },
+  onMusicStop(event){
+    const mgr = this.data._mgr;
+    mgr.pause();
+    app.gIsPlayingMusice = false;
+    app.gIsPlayingPostId = -1
+    this.setData({
+      isPlaying:false
+    })
   },
 
   async onShare(event){
