@@ -9,7 +9,7 @@ Page({
   },
   onTap:function(){
     //跳转页面
-    wx.redirectTo({
+    wx.switchTab({
       url: "/pages/posts/posts",
     })
   },

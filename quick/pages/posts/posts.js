@@ -2,7 +2,6 @@
 //var postData = require("../../data/data.js")
 
 import { postList } from '../../data/data.js'
-console.log(postList);
 Page({
 
   /**
@@ -23,8 +22,9 @@ Page({
   },
   onGoToDetail(event){
     //事件对象event
-    console.log(event);
-    const pid = event.currentTarget.dataset.postId
+    
+    const pid =event.currentTarget.dataset.postId || event.detail.pid
+    console.log(pid);
     wx.navigateTo({
       url: '/pages/post-detail/post-detail?pid='+pid,
     })

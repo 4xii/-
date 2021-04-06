@@ -67,7 +67,8 @@ Page({
   },
   onMusicStop(event){
     const mgr = this.data._mgr;
-    mgr.pause();
+    mgr.stop();
+    //mgr.pause();无法取消先用stop替代
     app.gIsPlayingMusice = false;
     app.gIsPlayingPostId = -1
     this.setData({
